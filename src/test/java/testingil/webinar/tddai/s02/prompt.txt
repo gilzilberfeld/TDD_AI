@@ -1,0 +1,20 @@
+I'm coding a calculator in Java.
+This calculator has two APIs
+
+void press(string key);
+string getDisplay();
+
+The calculator has the following rules:
+- It can accept any digit key
+- It can add and divide
+- Each press is a single key, sent as single character
+- It has a plus, div and equal keys
+- If display is more than 5 characters it displays E
+- If dividing by zero it displays E
+- If pressing a digit it shows the digit
+- If pressing plus or div the display doesn't change
+- Pressing equal displays the calculation result.
+
+Please create a set of tests that check the implementation. Do not create the implementation.
+
+
