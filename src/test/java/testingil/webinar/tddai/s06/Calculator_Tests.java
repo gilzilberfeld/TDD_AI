@@ -1,11 +1,12 @@
-package testingil.webinar.tddai.s03;
+package testingil.webinar.tddai.s06;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorTests {
+public class Calculator_Tests {
     private Calculator calculator;
 
     @BeforeEach
@@ -14,19 +15,19 @@ public class CalculatorTests {
     }
 
     @Test
-    public void testSingleDigitDisplay() {
+    public void onPressSingleDigit_DisplayTheDigit() {
         calculator.press("5");
-        assertEquals("5", calculator.getDisplay());
+        assertThat("5").isEqualTo(calculator.getDisplay());
     }
-//
-//    @Test
-//    public void testAddition() {
-//        calculator.press("2");
-//        calculator.press("+");
-//        calculator.press("3");
-//        calculator.press("=");
-//        assertEquals("5", calculator.getDisplay());
-//    }
+
+    @Test
+    public void onCalculateAddition_DisplayCorrectResult() {
+        calculator.press("2");
+        calculator.press("+");
+        calculator.press("3");
+        calculator.press("=");
+        assertThat("5").isEqualTo( calculator.getDisplay());
+    }
 //
 //    @Test
 //    public void testDivision() {
