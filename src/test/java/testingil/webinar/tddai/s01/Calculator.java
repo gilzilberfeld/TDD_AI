@@ -1,7 +1,7 @@
 package testingil.webinar.tddai.s01;
 
 
-public class CalculatorDisplay {
+public class Calculator {
 	String display = "";
 	int lastArgument = 0;
 	int result = 0;
