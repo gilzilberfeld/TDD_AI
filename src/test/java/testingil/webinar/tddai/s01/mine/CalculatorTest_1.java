@@ -2,11 +2,11 @@ package testingil.webinar.tddai.s01.mine;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import testingil.webinar.tddai.s01.CalculatorDisplay;
+import testingil.webinar.tddai.s01.Calculator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class CalculatorDisplayTest_1 {
+class CalculatorTest_1 {
 
     // my changes:
     // fix failing test
@@ -15,11 +15,11 @@ class CalculatorDisplayTest_1 {
     // assertThat instead of assertEquals
 
 
-    private CalculatorDisplay display;
+    private Calculator display;
 
     @BeforeEach
     public void setUp() {
-        display = new CalculatorDisplay();
+        display = new Calculator();
     }
 
     @Test

@@ -1,29 +1,29 @@
 package testingil.webinar.tddai.s01.generated1;
 
 import org.junit.jupiter.api.Test;
-import testingil.webinar.tddai.s01.CalculatorDisplay;
+import testingil.webinar.tddai.s01.Calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CalculatorDisplayTest_1 {
+// Prompt: "generate tests for the class, but make sure they pass"
+class CalculatorTest_2 {
 
-    // generated right-click on class -> generate test, no prompt
     @Test
     void displaysZeroInitially() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         assertEquals("0", display.getDisplay());
     }
 
     @Test
     void displaysSingleDigit() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         display.press("5");
         assertEquals("5", display.getDisplay());
     }
 
     @Test
     void displaysMultipleDigits() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         display.press("1");
         display.press("2");
         display.press("3");
@@ -32,7 +32,7 @@ class CalculatorDisplayTest_1 {
 
     @Test
     void displaysErrorOnOverflow() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         display.press("1");
         display.press("2");
         display.press("3");
@@ -44,7 +44,7 @@ class CalculatorDisplayTest_1 {
 
     @Test
     void performsAddition() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         display.press("2");
         display.press("+");
         display.press("3");
@@ -54,7 +54,7 @@ class CalculatorDisplayTest_1 {
 
     @Test
     void displaysErrorOnDivisionByZero() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         display.press("6");
         display.press("/");
         display.press("0");
@@ -64,12 +64,40 @@ class CalculatorDisplayTest_1 {
 
     @Test
     void resetsDisplayAfterOperation() {
-        CalculatorDisplay display = new CalculatorDisplay();
+        Calculator display = new Calculator();
         display.press("2");
         display.press("+");
         display.press("3");
         display.press("=");
         display.press("4");
         assertEquals("4", display.getDisplay());
+    }
+
+    @Test
+    void performsSubtraction() {
+        Calculator display = new Calculator();
+        display.press("5");
+        display.press("-");
+        display.press("3");
+        display.press("=");
+        assertEquals("2", display.getDisplay());
+    }
+
+    @Test
+    void performsMultiplication() {
+        Calculator display = new Calculator();
+        display.press("4");
+        display.press("*");
+        display.press("3");
+        display.press("=");
+        assertEquals("12", display.getDisplay());
+    }
+
+    @Test
+    void clearsDisplay() {
+        Calculator display = new Calculator();
+        display.press("5");
+        display.press("C");
+        assertEquals("0", display.getDisplay());
     }
 }
