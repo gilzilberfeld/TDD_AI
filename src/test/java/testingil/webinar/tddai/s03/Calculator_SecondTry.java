@@ -1,7 +1,7 @@
 package testingil.webinar.tddai.s03;
 
 // prompt: Generate the code for the Calculator class, based on the first test
-// testSingleDigitDisplay in testingil.webinar.tddai.s03.CalculatorTests
+// testSingleDigitDisplay in testingil.webinar.tddai.s03.Calculator_SecondTryTests
 public class Calculator_SecondTry {
     private String display;
 

@@ -1,8 +1,9 @@
 package testingil.webinar.tddai.s07;
 
 // prompt: Generate the code in the testingil.webinar.tddai.s07.Calculator to
-//          pass the two tests in testingil.webinar.tddai.s07.Calculator_Tests.
-//          Do not generate code that is required to pass the tests. Don't generate code according to the requirements
+//          pass all the tests in testingil.webinar.tddai.s07.Calculator_Tests.
+//          Do not generate code that is required to pass the tests.
+//          Don't generate code according to the requirements
 
 public class Calculator {
     private String display;

@@ -1,4 +1,4 @@
-package testingil.webinar.tddai.s01.generated1;
+package testingil.webinar.tddai.s01.generated;
 
 import org.junit.jupiter.api.Test;
 import testingil.webinar.tddai.s01.Calculator;

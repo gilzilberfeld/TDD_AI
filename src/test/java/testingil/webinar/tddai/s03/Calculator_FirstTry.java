@@ -1,7 +1,8 @@
 package testingil.webinar.tddai.s03;
 
 
-// Prompt: Generate the code for the Calculator class, based on the tests in testingil.webinar.tddai.s03.CalculatorTests
+// Prompt: Generate the code for the Calculator class, based on the tests in
+// testingil.webinar.tddai.s03.Calculator_FirstTryTests
 
 public class Calculator_FirstTry {
     private StringBuilder display;
