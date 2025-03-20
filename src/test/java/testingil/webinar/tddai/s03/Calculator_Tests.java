@@ -1,10 +1,11 @@
-package testingil.webinar.tddai.s02;
+package testingil.webinar.tddai.s03;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculatorTest_ChatGPT {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Calculator_Tests {
     private Calculator calculator;
 
     @BeforeEach
@@ -45,7 +46,6 @@ public class CalculatorTest_ChatGPT {
         assertEquals("E", calculator.getDisplay());
     }
 
-    // Bad test
     @Test
     public void testDisplayExceedsFiveCharacters() {
         calculator.press("1");
@@ -57,7 +57,6 @@ public class CalculatorTest_ChatGPT {
         assertEquals("E", calculator.getDisplay());
     }
 
-    // Interpretation
     @Test
     public void testConsecutiveOperators() {
         calculator.press("4");
@@ -68,14 +67,12 @@ public class CalculatorTest_ChatGPT {
         assertEquals("E", calculator.getDisplay());
     }
 
-    // Interpretation
     @Test
     public void testImmediateEquals() {
         calculator.press("=");
         assertEquals("E", calculator.getDisplay());
     }
 
-    // Interpretation
     @Test
     public void testOperatorWithoutSecondOperand() {
         calculator.press("4");

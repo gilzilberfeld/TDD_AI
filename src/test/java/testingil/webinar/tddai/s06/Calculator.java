@@ -1,8 +1,13 @@
 package testingil.webinar.tddai.s06;
 
-// prompt: refactor the testingil.webinar.tddai.s06.Calculator
-// class to have switch-case structure
+// 1st prompt: Generate the code in the testingil.webinar.tddai.s06.Calculator to
+//          pass the two tests in testingil.webinar.tddai.s06.Calculator_Tests
 
+
+// 2nd Prompt: Generate the code in the testingil.webinar.tddai.s06.Calculator to
+//              pass the two tests in testingil.webinar.tddai.s06.Calculator_Tests.
+//              Do not generate code that is required to pass the tests.
+//              Same result
 public class Calculator {
     private String display;
     private int firstOperand;
@@ -19,41 +24,25 @@ public class Calculator {
     }
 
     public void press(String key) {
-        switch (key) {
-            case "0":
-            case "1":
-            case "2":
-            case "3":
-            case "4":
-            case "5":
-            case "6":
-            case "7":
-            case "8":
-            case "9":
-                if (display.equals("0")) {
-                    display = key;
-                } else {
-                    display += key;
+        if (key.matches("\\d")) {
+            // This bit is suspiciously similar to the requirements
+            if (display.equals("0")) {
+                display = key;
+            } else {
+                display += key;
+            }
+        } else if (key.equals("+")) {
+            firstOperand = Integer.parseInt(display);
+            operator = key;
+            isSecondOperand = true;
+            display = "";
+        } else if (key.equals("=")) {
+            if (isSecondOperand) {
+                secondOperand = Integer.parseInt(display);
+                if (operator.equals("+")) {
+                    display = String.valueOf(firstOperand + secondOperand);
                 }
-                break;
-            case "+":
-                firstOperand = Integer.parseInt(display);
-                operator = key;
-                isSecondOperand = true;
-                display = "";
-                break;
-            case "=":
-                if (isSecondOperand) {
-                    secondOperand = Integer.parseInt(display);
-                    switch (operator) {
-                        case "+":
-                            display = String.valueOf(firstOperand + secondOperand);
-                            break;
-                        // Add more cases for other operators if needed
-                    }
-                }
-                break;
-            // Add more cases for other keys if needed
+            }
         }
     }
 

@@ -2,7 +2,6 @@ package testingil.webinar.tddai.s06;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,16 +16,16 @@ public class Calculator_Tests {
     @Test
     public void onPressSingleDigit_DisplayTheDigit() {
         calculator.press("5");
-        assertThat("5").isEqualTo(calculator.getDisplay());
+        assertThat("5").isEqualTo( calculator.getDisplay());
     }
 
     @Test
-    public void onCalculateAddition_DisplayCorrectResult() {
+    public void testAddition() {
         calculator.press("2");
         calculator.press("+");
         calculator.press("3");
         calculator.press("=");
-        assertThat("5").isEqualTo( calculator.getDisplay());
+        assertEquals("5", calculator.getDisplay());
     }
 //
 //    @Test

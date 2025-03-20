@@ -1,17 +1,17 @@
 package testingil.webinar.tddai.s03;
 
 
-// Prompt: Generate the code for the Calculator class, based on the tests in
-// testingil.webinar.tddai.s03.Calculator_FirstTryTests
+// Prompt: Generate the code for the Calculator class, based on the first test in
+// testingil.webinar.tddai.s03.Calculator_Tests
 
-public class Calculator_FirstTry {
+public class Calculator {
     private StringBuilder display;
     private int firstOperand;
     private int secondOperand;
     private String operator;
     private boolean isSecondOperand;
 
-    public Calculator_FirstTry() {
+    public Calculator() {
         display = new StringBuilder("0");
         firstOperand = 0;
         secondOperand = 0;

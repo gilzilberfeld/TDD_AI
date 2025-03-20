@@ -14,19 +14,19 @@ public class Calculator_Tests {
     }
 
     @Test
-    public void onPressSingleDigit_DisplayTheDigit() {
-        calculator.press("5");
-        assertEquals("5", calculator.getDisplay());
+    public void testSingleDigitDisplay() {
+            calculator.press("5");
+            assertEquals("5", calculator.getDisplay());
     }
-
-    @Test
-    public void testAddition() {
-        calculator.press("2");
-        calculator.press("+");
-        calculator.press("3");
-        calculator.press("=");
-        assertEquals("5", calculator.getDisplay());
-    }
+//
+//    @Test
+//    public void testAddition() {
+//        calculator.press("2");
+//        calculator.press("+");
+//        calculator.press("3");
+//        calculator.press("=");
+//        assertEquals("5", calculator.getDisplay());
+//    }
 //
 //    @Test
 //    public void testDivision() {

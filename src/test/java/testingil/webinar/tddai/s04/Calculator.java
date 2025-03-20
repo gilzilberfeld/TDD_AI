@@ -1,5 +1,7 @@
 package testingil.webinar.tddai.s04;
 
+// prompt: Generate the code for the Calculator class, based on the first test
+// testSingleDigitDisplay in testingil.webinar.tddai.s04.Calculator_Tests
 public class Calculator {
     private String display;
 

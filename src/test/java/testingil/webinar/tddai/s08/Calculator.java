@@ -1,7 +1,9 @@
-package testingil.webinar.tddai.s07;
+package testingil.webinar.tddai.s08;
 
-// prompt: refactor the testingil.webinar.tddai.s07.Calculator
-// class to have switch-case structure
+// prompt: Generate the code in the testingil.webinar.tddai.s08.Calculator to
+//          pass all the tests in testingil.webinar.tddai.s08.Calculator_Tests.
+//          Do not generate code that is required to pass the tests.
+//          Don't generate code according to the requirements
 
 public class Calculator {
     private String display;

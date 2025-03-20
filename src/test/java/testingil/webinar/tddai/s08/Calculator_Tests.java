@@ -1,10 +1,12 @@
-package testingil.webinar.tddai.s02;
+package testingil.webinar.tddai.s08;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculatorTest_ChatGPT {
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Calculator_Tests {
     private Calculator calculator;
 
     @BeforeEach
@@ -13,18 +15,18 @@ public class CalculatorTest_ChatGPT {
     }
 
     @Test
-    public void testSingleDigitDisplay() {
+    public void onPressSingleDigit_DisplayTheDigit() {
         calculator.press("5");
-        assertEquals("5", calculator.getDisplay());
+        assertThat("5").isEqualTo(calculator.getDisplay());
     }
 
     @Test
-    public void testAddition() {
+    public void onCalculateAddition_DisplayCorrectResult() {
         calculator.press("2");
         calculator.press("+");
         calculator.press("3");
         calculator.press("=");
-        assertEquals("5", calculator.getDisplay());
+        assertThat("5").isEqualTo( calculator.getDisplay());
     }
 
     @Test
@@ -46,18 +48,17 @@ public class CalculatorTest_ChatGPT {
     }
 
     // Bad test
-    @Test
-    public void testDisplayExceedsFiveCharacters() {
-        calculator.press("1");
-        calculator.press("+");
-        calculator.press("2");
-        calculator.press("+");
-        calculator.press("3");
-        calculator.press("=");
-        assertEquals("E", calculator.getDisplay());
-    }
+//    @Test
+//    public void testDisplayExceedsFiveCharacters() {
+//        calculator.press("1");
+//        calculator.press("+");
+//        calculator.press("2");
+//        calculator.press("+");
+//        calculator.press("3");
+//        calculator.press("=");
+//        assertEquals("E", calculator.getDisplay());
+//    }
 
-    // Interpretation
     @Test
     public void testConsecutiveOperators() {
         calculator.press("4");
@@ -68,14 +69,12 @@ public class CalculatorTest_ChatGPT {
         assertEquals("E", calculator.getDisplay());
     }
 
-    // Interpretation
     @Test
     public void testImmediateEquals() {
         calculator.press("=");
         assertEquals("E", calculator.getDisplay());
     }
 
-    // Interpretation
     @Test
     public void testOperatorWithoutSecondOperand() {
         calculator.press("4");
