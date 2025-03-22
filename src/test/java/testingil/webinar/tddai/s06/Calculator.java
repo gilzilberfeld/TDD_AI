@@ -25,7 +25,7 @@ public class Calculator {
 
     public void press(String key) {
         if (key.matches("\\d")) {
-            // This bit is suspiciously similar to the requirements
+            // This bit is suspiciously similar to other examples
             if (display.equals("0")) {
                 display = key;
             } else {
